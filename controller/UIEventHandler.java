@@ -40,9 +40,9 @@ public class UIEventHandler implements EventHandler<Event> {
 			id = ((Button) source).getId();
 
 		} else if (source instanceof ListView) {
-			System.err.println("**** ListView: " + view.dialog_ressources());
-			//System.out.println((ListView) source).getId();
-			//model.setTopics(view.dialog_ressources());
+
+			System.out.println(((ListView<?>) source).getSelectionModel().getSelectedItems());
+
 
 		} else {
 			System.err.println("**** Error: unexpected case: " + source.getClass().getName());
@@ -72,7 +72,10 @@ public class UIEventHandler implements EventHandler<Event> {
 					System.out.println("error");
 					break;
 			}
-			model.notifyAllObservers();
+
+
+
+			model.notifyAllObservers(); // Update de tous les observers
 
 		} catch (Exception e1) {
 			e1.printStackTrace();

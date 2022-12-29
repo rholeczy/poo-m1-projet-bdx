@@ -6,4 +6,6 @@ public class ExamenMedical extends Task{
     public ExamenMedical(List<String> topics) {
         super(topics);
     }
+
+
 }

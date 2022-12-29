@@ -50,7 +50,6 @@ public class Controller implements IController {
 		switch (currentState.getType()) {
 
 		case INIT_STATE:
-
 			break;
 
 		case ERROR_STATE:
